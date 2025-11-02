@@ -40,12 +40,12 @@ public class Contact implements ICallActions {
     public String getCode(){
         String[] lastNames = this.lastName.split(" ");
         StringBuilder sb = new StringBuilder();
-        String newCleanCode = "";
+        String newCleanCode;
 
-        sb.append(this.name.substring(0,1));
+        sb.append(this.name.charAt(0));
 
         if (lastNames.length > 1) {
-            sb.append(lastNames[0].substring(0,1));
+            sb.append(lastNames[0].charAt(0));
             for (int i = 1; i < lastNames.length; i++) {
                 sb.append(lastNames[i]);
             }
